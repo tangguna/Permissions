@@ -43,6 +43,8 @@ Android权限管理，适配到Android O
 参数requestCode为请求状态码，可以自己定义数值；permissions为请求权限，IPermissionsCallback为请求回调结果（成功或者失败）
 可以根据回调返回参数String判断（成功返回授权成功，失败返回授权失败）
 
+此外，PermissionBuilder.needPermission（）提供多种方法可供调用。
+
 #### 然后需要在权限回调方法中回调
         @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
