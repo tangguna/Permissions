@@ -28,6 +28,15 @@ Android权限管理，适配到Android O
     
 ###使用方式
 #### 此库可以动态设置，支持在activity与fragment中配置，使用时调用方法：
+        /**
+         * @param activity
+         * @param requestCode
+         *         状态码,可以自定义数值
+         * @param permissions
+         *         需要访问权限，包括，但不限于Permission提供（也可以调用其它权限）
+         * @param callback
+         *         权限申请回调 成功（返回requestCode与"授权成功"字符串） 失败（返回requestCode与"授权失败"字符串）
+         */
       PermissionBuilder.needPermission(MainActivity.this, 20, Permission.STORAGE, new IPermissionsCallback() {
             @Override
             public void onPermissionSuccess(int i, String s) {
